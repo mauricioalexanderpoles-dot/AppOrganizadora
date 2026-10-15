@@ -1,0 +1,24 @@
+# ── AppOrganizadora · dependencias de producción ──
+# Rangos con cota inferior y techo en la siguiente versión mayor. Tras instalar,
+# congela las versiones exactas en requirements.lock (ver instrucciones).
+
+# API
+fastapi>=0.115,<1
+uvicorn>=0.32,<1            # sin [standard]: no necesitamos uvloop/watchfiles en producción
+
+# Datos y configuración
+aiosqlite>=0.20,<1
+pydantic>=2.9,<3
+pydantic-settings>=2.6,<3
+
+# NLP (se reutiliza responses.parse del MVP)
+openai>=1.66
+
+# Google Calendar / Tasks
+google-api-python-client>=2.150,<3
+google-auth>=2.35,<3
+google-auth-httplib2>=0.2,<1
+google-auth-oauthlib>=1.2,<2   # solo para el flujo OAuth puntual
+
+# Zonas horarias en imágenes slim (zoneinfo necesita la base de datos IANA)
+tzdata

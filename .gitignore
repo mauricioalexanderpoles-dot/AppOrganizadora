@@ -1,0 +1,15 @@
+# Secretos y datos: NUNCA en git
+.env
+secrets/
+data/
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Editores / SO
+.vscode/
+.idea/
+.DS_Store
